@@ -275,31 +275,100 @@ function selectAnswer(effects) {
 // CALCULATE ARCHETYPE
 // ----------------------
 function calculateArchetype(scores) {
-  let highestType = null;
 
-  for (let type in scores) {
-    if (!highestType || scores[type] > scores[highestType]) {
-      highestType = type;
-    }
+  // DRIVER (high star + diamond, low others)
+  if (
+    scores.star > 0 &&
+    scores.diamond > 0 &&
+    scores.triangle <= 0 &&
+    scores.square <= 0
+  ) {
+    return "driver";
   }
 
-  return highestType;
+  // SUPPORTER (high triangle + square, low others)
+  if (
+    scores.triangle > 0 &&
+    scores.square > 0 &&
+    scores.star <= 0 &&
+    scores.diamond <= 0
+  ) {
+    return "supporter";
+  }
+
+  // MOTIVATOR (high star + diamond + square)
+  if (
+    scores.star > 0 &&
+    scores.diamond > 0 &&
+    scores.square > 0
+  ) {
+    return "motivator";
+  }
+
+  // STRATEGIST (balanced but triangle strong)
+  if (
+    scores.triangle > 0 &&
+    scores.diamond > 0 &&
+    scores.star > 0
+  ) {
+    return "strategist";
+  }
+  // Fallback (if nothing matches)
+  return "supporter";
+}
+
+function retakeQuiz() {
+  location.reload();
+}
+
+function saveImage() {
+  const img = document.getElementById("result-image");
+
+  const link = document.createElement("a");
+  link.href = img.src;
+  link.download = "my-archetype.png";
+
+  link.click();
 }
 
 // ----------------------
 // SHOW RESULT
 // ----------------------
 function showResult(result) {
-  document.getElementById("quiz").innerHTML = `
-    <h2>Your Archetype: ${result.toUpperCase()}</h2>
+  const archetypes = {
+    driver: {
+      title: "The Driver",
+      img: "images/drivercard.png"
+    },
+    strategist: {
+      title: "The Strategist",
+      img: "images/strategistcard.png"
+    },
+    motivator: {
+      title: "The Motivator",
+      img: "images/motivatorcard.png"
+    },
+    supporter: {
+      title: "The Supporter",
+      img: "images/supportercard.png"
+    },
+    balanced: {
+      title: "Balanced Soul",
+      img: "images/balanced.png"
+    }
+  };
 
-    <p>Final Scores:</p>
-    <ul>
-      <li>Diamond: ${scores.diamond}</li>
-      <li>Star: ${scores.star}</li>
-      <li>Triangle: ${scores.triangle}</li>
-      <li>Square: ${scores.square}</li>
-    </ul>
+  const chosen = archetypes[result];
+
+  document.getElementById("quiz").innerHTML = `
+    <div class="result-screen">
+      <img id="result-image" src="${chosen.img}" alt="Result">
+
+      <div class="result-buttons">
+        <button onclick="saveImage()">Save Image</button>
+        <button onclick="retakeQuiz()">Retake Quiz</button>
+      </div>
+    </div>
   `;
 }
 
