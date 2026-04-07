@@ -1,0 +1,16 @@
+@font-face {
+	font-family: 'ChelseaMarket'; //for the headers
+	font-weight: normal;
+	font-style: normal;
+	/* letter-spacing: 3px; */
+	src: url('fonts/ChelseaMarket-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Alexandria'; //for the body
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: 3px;
+  line-height: 28px;
+	src: url('fonts/Alexandria[wght].ttf') format('truetype');
+}

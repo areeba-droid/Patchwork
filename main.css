@@ -1,0 +1,259 @@
+/* ── TOKENS ───────────────────────────────────────────────── */
+:root {
+  --background: #FBF7E4;
+  --text: #67665E;
+  --willow: #A1C653;
+  --bloom: #D2678D;
+  --hayfield: #DEC43C;
+  --dew: #9CC9D0;
+  --stone: #A272A2;
+  --steel: #EAA040;
+  --brown: #662617;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background);
+}
+
+body {
+  font-family: "Alexandria";
+}
+
+p {
+  font-family: "Alexandria";
+  line-height: 25px;
+}
+
+h1, h2, h3, h4 {
+  font-family: "ChelseaMarket";
+  color: var(--brown);
+}
+
+header {
+  z-index: 2;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* width: 100%; */
+  overflow: hidden;
+  justify-content: center;
+  align-items: baseline;
+  align-content: flex-end;
+  /* margin-top: -1rem; */
+}
+
+nav {
+ display: flex;
+   align-items: center;
+}
+
+nav a {
+  font-weight: normal;
+  margin: 1rem;
+  color: var(--brown);
+  text-decoration: none;
+  transition: 0.05s;
+}
+
+nav a:hover, nav a:focus {
+
+}
+
+button {
+  background-color: white;
+  margin: 0.5rem;
+  padding: 20px 30px;
+  border-radius: 1.2rem;
+  border-color: var(--brown);
+  border-width: medium;
+  font-family: "Alexandria";
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--brown);
+}
+
+#not-quiz {
+  padding: 0;
+}
+
+.button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 20px 30px;
+
+  background: #7a9e7e;
+  color: white;
+
+  border-radius: 10px;
+  text-decoration: none;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #5f8263;
+}
+
+.nav-img {
+  /* margin-top: -1rem; */
+  max-width: 6rem;
+  height: auto;
+}
+
+.hero {
+  height: 120vh; /* Full screen height */
+  width: 100%;
+
+  background-image: url('images/background.png');
+  background-size: cover;        /* fills screen */
+  background-position: center;   /* keeps image centered */
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;           /* vertical center */
+  justify-content: center;       /* horizontal center */
+  position: relative;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  margin-top: -10vh;
+  /* max-width: 800px;
+  padding: 0 20px; */
+}
+
+.hero-content h1 {
+  font-size: 5rem;
+  margin-bottom: 10px;
+  color: var(--brown);
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: var(--brown);
+}
+
+.hero-content {
+  position: relative; /* keeps text above overlay */
+  z-index: 1;
+}
+
+/* Cozy box */
+.overlay-box {
+  position: relative;
+  z-index: 1;
+
+  background: rgba(255, 248, 230, 0.2);
+  backdrop-filter: blur(6px);
+
+  padding: 3rem 5rem 3rem 5rem;
+  border-radius: 20px;
+
+  max-width: 70vw;
+  text-align: center;
+
+  border: 3px solid rgba(102, 38, 23, 0.5);
+  box-shadow: 0 10px 40px rgba(80, 60, 30, 0.25);
+}
+
+.overlay-box p {
+  color: var(--brown);
+}
+
+.archetypes {
+  margin: 8rem 15rem 10rem 15rem;
+}
+
+.char-box {
+  display: flex;
+  align-items: flex-end;
+  margin: 2rem 0 -2rem 0;
+}
+
+.char-box img {
+  max-width: 20rem;
+  margin-right: 3rem;
+  margin-left: 3rem;
+}
+
+.char-text h2 {
+  margin-bottom: 0.75rem;
+  text-align: right;
+}
+
+.char-text p {
+  text-align: right;
+}
+
+.char-text {
+  margin-left: 20rem;
+}
+
+.char-text-right {
+  margin-right: 20rem;
+}
+
+.char-text-right h2 {
+  margin-bottom: 0.75rem;
+}
+
+.quiz-button {
+  overflow: hidden;
+  justify-content: center;
+}
+
+.quiz {
+  text-align: center;
+  margin-top: -5rem;
+  margin-bottom: 3rem;
+}
+
+
+#quiz {
+  height: 70vh;
+  margin: 0 20rem 0 20rem;
+
+  /* background-image: url('images/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-top: 30vh;
+
+}
+
+.question-text {
+  text-align: center;
+  /* margin-top: -10vh; */
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--brown);
+}
+
+#answers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#answers button {
+  width: 100%;
+  padding: 12px;
+}
