@@ -274,6 +274,13 @@ button {
   margin-bottom: 3rem;
 }
 
+#progress {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #7a9e7e;
+}
+
 @media (max-width: 720px) {
   html {
     font-size: 16px;

@@ -8,6 +8,8 @@ let scores = {
   square: 0
 };
 
+const TOTAL_QUESTIONS = 20;
+
 // ----------------------
 // QUESTION BANK (15)
 // ----------------------
@@ -374,6 +376,9 @@ function showQuestion() {
 
     answersDiv.appendChild(btn);
   });
+
+  document.getElementById("progress").textContent =
+  `Question ${currentQuestionIndex + 1} of ${TOTAL_QUESTIONS}`;
 }
 
 // ----------------------
