@@ -219,6 +219,129 @@ const questions = [
       effects: { star: 1 }
     }
   ]
+  },
+  {
+  question: "20 minutes into your team’s travel, you realize some of the materials needed to complete the tasks are missing.",
+  answers: [
+    {
+      text: "Ask other villagers if they have extra supplies to spare ",
+      effects: { star: -1, diamond: -1 }
+    },
+    {
+      text: "Figure out which materials can be substituted",
+      effects: { star: 1, triangle: -1 }
+    },
+    {
+      text: "Start the tasks that don’t require the missing materials",
+      effects: { triangle: -1, square: -1 }
+    }
+  ]
+  },
+  {
+  question: "The fruit on the trees are starting to over ripen and fall to the  floor but no one has started gathering yet.",
+  answers: [
+    {
+      text: "Start picking fruit and trust others will follow",
+      effects: { star: 1, diamond: 1 }
+    },
+    {
+      text: "Tell everyone to start picking the fruit ",
+      effects: { star: 1, square: -1, diamond: 1 }
+    },
+    {
+      text: "Consult with the team to figure out who is doing what",
+      effects: { triangle: 1, square: 1, star: 1 }
+    }
+  ]
+  },
+  {
+  question: "Your group discovers an ancient tree that is said to hold special resources but harvesting it incorrectly could destroy it.",
+  answers: [
+    {
+      text: "Come up with a plan together",
+      effects: { square: 1, triangle: 1, star: -1, diamond: 1 }
+    },
+    {
+      text: "Try harvesting one to see what happens",
+      effects: { star: 1, triangle: -1, diamond: 1 }
+    },
+    {
+      text: "Ask your professional tree harvester friend for help",
+      effects: { triangle: -1, star: 1 }
+    }
+  ]
+  },
+  {
+  question: "You’ve been assigned to a new forest restoration team and the leader asks if anyone has ideas on how to begin.",
+  answers: [
+    {
+      text: "Trust that your thoughts  will be mentioned by someone else",
+      effects: { star: 1, diamond: -1 }
+    },
+    {
+      text: "After assessing the vibe of the group, you add a suggestion",
+      effects: { star: -1, square: 1 }
+    },
+    {
+      text: "Share your ideas right away",
+      effects: { diamond: 1, star: 1, square: -1 }
+    }
+  ]
+  },
+  {
+  question: "Inside the cave, the rebuilding team gathers to share ideas. A few villagers remain silent while others dominate the conversation.",
+  answers: [
+    {
+      text: "Ask them if they have anything to share with the group",
+      effects: { square: -1, diamond: 1 }
+    },
+    {
+      text: "Allow the villagers to share or keep to themselves",
+      effects: { triangle: -1, square: 1 }
+    },
+    {
+      text: "Make the villagers comfortable enough to share eventually",
+      effects: { diamond: -1, star: -1, square: 1 }
+    }
+  ]
+  },
+  {
+  question: "On the way to present your inventions at the town festival, your cart comes a sudden stop.",
+  answers: [
+    {
+      text: "Think positively and accept the situation",
+      effects: { triangle: -1, star: 1 }
+    },
+    {
+      text: "Search up alternate routes before consulting team",
+      effects: { triangle: 1, square: -1, diamond: 1, star: 1}
+    },
+    {
+      text: "Suggest alternative routes to the team",
+      effects: { triangle: -1, star: 1, square: -1 }
+    }
+  ]
+  },
+  {
+  question: "Only three tools remain in the workshop, but everyone wants them to finish their own tasks.",
+  answers: [
+    {
+      text: "Suggest a random draw",
+      effects: { square: 1, diamond: 1 }
+    },
+    {
+      text: "Discuss who needs it most",
+      effects: { triangle: 1, square: -1, diamond: 1, star: 1}
+    },
+    {
+      text: "Rely on first come first serve",
+      effects: { triangle: -1, star: 1, square: -1 }
+    },
+    {
+      text: "Think of a way to share tools",
+      effects: { triangle: -1, star: 1, square: -1 }
+    }
+  ]
   }
 ];
 
